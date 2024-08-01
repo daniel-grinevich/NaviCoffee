@@ -1,0 +1,6 @@
+/Users/Dandelion/Downloads/NaviCoffee 4/src/NaviCoffee/NaviCoffee.Tests/obj/Debug/netcoreapp3.1/NaviCoffee.Tests.csproj.AssemblyReference.cache
+/Users/Dandelion/Downloads/NaviCoffee 4/src/NaviCoffee/NaviCoffee.Tests/obj/Debug/netcoreapp3.1/NaviCoffee.Tests.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Dandelion/Downloads/NaviCoffee 4/src/NaviCoffee/NaviCoffee.Tests/obj/Debug/netcoreapp3.1/NaviCoffee.Tests.AssemblyInfoInputs.cache
+/Users/Dandelion/Downloads/NaviCoffee 4/src/NaviCoffee/NaviCoffee.Tests/obj/Debug/netcoreapp3.1/NaviCoffee.Tests.AssemblyInfo.cs
+/Users/Dandelion/Downloads/NaviCoffee 4/src/NaviCoffee/NaviCoffee.Tests/obj/Debug/netcoreapp3.1/NaviCoffee.Tests.csproj.CoreCompileInputs.cache
+/Users/Dandelion/Downloads/NaviCoffee 4/src/NaviCoffee/NaviCoffee.Tests/obj/Debug/netcoreapp3.1/NaviCoffee.Tests.sourcelink.json

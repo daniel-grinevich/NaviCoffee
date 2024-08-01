@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             xmlns:models="clr-namespace:NaviCoffee.Models"
+             xmlns:controls="clr-namespace:NaviCoffee.Controls"             
+             x:Class="NaviCoffee.Controls.CoffeesContentView"
+             x:Name="this">
+    <ContentView.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+
+            <controls:TopMenuContentView MenuTitle="BACK"></controls:TopMenuContentView>
+
+            <controls:ClosestLocationContentView></controls:ClosestLocationContentView>
+
+            <CollectionView ItemsSource="{Binding Coffees}" VerticalOptions="FillAndExpand" Margin="12, 12, 12, 0">                
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="12"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <!--<controls:CoffeeContentView
+                                                CoffeeId="{Binding CoffeeId}"
+                                                CoffeeName="{Binding Name}"
+                                                CoffeeImage="{Binding Image}"
+                                                CoffeePrice="{Binding PriceString}"
+                                                IngredientsVisible="False"
+                                                CoffeeSubtitle="Swipe > To order">
+                                            </controls:CoffeeContentView>
+                        -->
+                        <!--<controls:SwipeableCoffee CoffeeId="{Binding CoffeeId}" CoffeeName="{Binding Name}" CoffeeImage="{Binding Image}"
+                                                  CoffeePrice="{Binding PriceString}" CoffeeSubtitle="Swipe > To order">
+                        </controls:SwipeableCoffee>                                       -->
+                        <controls:SwipeableCoffee
+                                                CoffeeId="{Binding CoffeeId}"
+                                                CoffeeName="{Binding Name}"
+                                                CoffeeImage="{Binding Image}"
+                                                CoffeePrice="{Binding PriceString}"                                                
+                                                CoffeeSubtitle="Swipe > To order">
+                                            </controls:SwipeableCoffee>
+                        
+                        
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+           
+            <!--
+            <controls:SwipeableCoffee CoffeeName="Coffee" CoffeeImage="whitecoffeecup600.jpg" CoffeePrice="2.5" CoffeeSubtitle="Swipe > To order">
+            </controls:SwipeableCoffee>
+
+            <controls:SwipeableCoffee CoffeeName="Espresso" CoffeeImage="whitecoffeecup600.jpg" CoffeePrice="2.5" CoffeeSubtitle="Swipe > To order">
+            </controls:SwipeableCoffee>
+            
+            <controls:SwipeableCoffee CoffeeName="Latte" CoffeeImage="whitecoffeecup600.jpg" CoffeePrice="2.5" CoffeeSubtitle="Swipe > To order">
+            </controls:SwipeableCoffee>
+            -->
+
+            <!-- START OF BOTTOM MENU -->
+            <Grid VerticalOptions="StartAndExpand" RowSpacing="0" HeightRequest="60">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="25" />
+                </Grid.RowDefinitions>
+
+                <Image Grid.Column="0" Grid.Row="0" Source="uparrow.png" Style="{StaticResource MenuImageStyle}" />
+                <Label Grid.Column="0" Grid.Row="1" Text="CUSTOMIZE" Style="{StaticResource MenuTextStyle}" />                
+            </Grid>
+            <!-- END OF BOTTOM MENU -->
+
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

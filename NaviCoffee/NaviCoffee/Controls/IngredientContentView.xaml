@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Name="this"
+             x:Class="NaviCoffee.Controls.IngredientContentView">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Color x:Key="IngredientTextColor">#d5ae63</Color>
+            <Style x:Key="IngredientTextStyle" TargetType="Label" >
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{StaticResource IngredientTextColor}" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="Margin" Value="0, 0, 0, 0" />
+            </Style>
+            <Style x:Key="IngredientButtonStyle" TargetType="Button">
+                <Setter Property="WidthRequest" Value="40" />
+                <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <ContentView.Content>
+        <StackLayout BindingContext="{x:Reference this}" Padding="0,0,0,0">
+            <Frame Style="{StaticResource FrameStyle}">
+                <Grid VerticalOptions="Start" HorizontalOptions="CenterAndExpand" RowSpacing="0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" Grid.Column="0" Text="-" Style="{StaticResource IngredientButtonStyle}"/>
+                    <Label  Grid.Row="0" Grid.Column="1" Text="{Binding IngredientName, FallbackValue='Test'}"  Style="{StaticResource IngredientTextStyle}" />
+                    <Button Grid.Row="0" Grid.Column="2" Text="+" Style="{StaticResource IngredientButtonStyle}" />
+                </Grid>
+            </Frame>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Name="this"
+             x:Class="NaviCoffee.Controls.TopMenuContentView">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Color x:Key="MenuTextColor">#d5ae63</Color>
+            <Color x:Key="BackgroundColor">#FFFFFF</Color>
+            <Color x:Key="CellBackgroundColor">#FFFFFF</Color>
+            <Color x:Key="SwipeItemTextColor">#FFFFFF</Color>
+            <Color x:Key="SwipeItemBackgroundColor">#01E8B2</Color>
+            <Color x:Key="TitleColor">#55A1FA</Color>
+            <Color x:Key="SubTitleColor">#777777</Color>
+            
+            <Style x:Key="MenuTextStyle" TargetType="Label" >
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{StaticResource MenuTextColor}" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="Margin" Value="0, 0, 0, 0" />
+            </Style>
+
+            <Style x:Key="MenuImageStyle" TargetType="Image">
+                <Setter Property="Opacity" Value="0.75" />
+                <Setter Property="Aspect" Value="AspectFit" />
+                <Setter Property="Margin" Value="0, 5, 0, 0" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentView.Resources>
+  <ContentView.Content>
+      <StackLayout>
+            
+                    <Grid VerticalOptions="Center" RowSpacing="0" HeightRequest="60" BindingContext="{x:Reference this}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="20" />
+                        </Grid.RowDefinitions>
+
+                        <ContentView HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Row="0" Grid.Column="0">
+                            <ContentView.Content>
+                                <Label Grid.Column="0" Grid.Row="0" Text="{Binding MenuTitle}" Style="{StaticResource MenuTextStyle}" />
+                            </ContentView.Content>
+                        </ContentView>
+                        <Image Grid.Column="0" Grid.Row="1" d:Source="downarrow.jpg" Source="{Binding MenuImage}" Style="{StaticResource MenuImageStyle}" />
+                    </Grid>
+               
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

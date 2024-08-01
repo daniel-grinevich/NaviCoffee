@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Name="this"
+             xmlns:controls="clr-namespace:NaviCoffee.Controls"             
+             x:Class="NaviCoffee.Controls.SwipeableCoffee">
+  <ContentView.Content>
+        <SwipeView BindingContext="{x:Reference this}">
+            <SwipeView.RightItems>
+                <SwipeItems Mode="Execute" SwipeBehaviorOnInvoked="Close" >                    
+                    <SwipeItemView Invoked="SwipeItemView_Invoked">
+                        <Grid WidthRequest="400" BackgroundColor="{StaticResource BackgroundColor}">
+                            <BoxView Style="{StaticResource SwipeItemBox}"/>
+                            <Label Text="Add to Order" Style="{StaticResource SwipeItemTextStyle}"/>
+                        </Grid>
+                    </SwipeItemView>
+                </SwipeItems>
+            </SwipeView.RightItems>
+            <SwipeView.LeftItems>
+                <SwipeItems Mode="Execute">
+                    <SwipeItemView Invoked="SwipeItemView_Delete_Invoked">
+                        <Grid WidthRequest="400">
+                            <BoxView Style="{StaticResource SwipeToDeleteItemBoxStyle}"/>
+                            <Label Text="Remove from Order" Style="{StaticResource SwipeToDeleteItemTextStyle}"/>
+                        </Grid>
+                    </SwipeItemView>
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <SwipeView.Content>                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Row="0" Style="{StaticResource FrameCustomizationStyle}">
+                        <Grid VerticalOptions="Start" RowSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="100" />
+                                <RowDefinition Height="25" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>                        
+                            <Label Grid.Column="0" Grid.Row="0" Text="{Binding CoffeeName}" Style="{StaticResource NameStyle}" />
+                            <Image Grid.Column="1" Grid.Row="0" Source="{Binding CoffeeImage}" Style="{StaticResource CoffeeImageStyle}" />
+                            <Label Grid.Column="2" Grid.Row="0" Text="{Binding CoffeePrice}" HorizontalOptions="EndAndExpand" Style="{StaticResource PriceStyle}"/>
+                            <Label Grid.Column="2" Grid.Row="1" Text="{Binding CoffeeSubtitle}" Style="{StaticResource SwipeToOrderStyle}" />
+                        </Grid>                    
+                    </Frame>
+                </Grid>
+            </SwipeView.Content>
+        </SwipeView>
+    </ContentView.Content>
+</ContentView>

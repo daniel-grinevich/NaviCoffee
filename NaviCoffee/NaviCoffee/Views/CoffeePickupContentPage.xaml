@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             xmlns:zxcm="clr-namespace:ZXing.Common;assembly=zxing.portable"
+             x:Class="NaviCoffee.Views.CoffeePickupContentPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label Text="Order completed." HorizontalOptions="CenterAndExpand" />
+            <Label Text="Scan barcode at machine to pickup coffee." HorizontalOptions="CenterAndExpand" />
+
+            <!-- Note that BarcodeValue below is being written in CoffeeCustomizationView.cs.
+                 Once multiple coffees are allowed per order this will be updated to use data binding
+            -->
+            <zxing:ZXingBarcodeImageView x:Name="BarcodeImageView"
+                        BarcodeFormat="QR_CODE" IsVisible="true"
+                        BarcodeValue="123456789012"
+                        VerticalOptions="Center"
+                        HeightRequest="500">
+                <zxing:ZXingBarcodeImageView.BarcodeOptions>
+                    <zxcm:EncodingOptions Width="500" Height="500" />
+                </zxing:ZXingBarcodeImageView.BarcodeOptions>
+            </zxing:ZXingBarcodeImageView> 
+            <Button Text="Start over" Clicked="StartOver_Clicked" ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

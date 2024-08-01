@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             xmlns:controls="clr-namespace:NaviCoffee.Controls"             
+             mc:Ignorable="d"
+             xmlns:models="clr-namespace:NaviCoffee.Models"
+             x:Class="NaviCoffee.Views.CoffeeCustomizationView"
+             x:Name="CoffeeCustomizationPage" >
+    <ContentPage.Content>
+        <SwipeView>
+                <SwipeView.TopItems>
+                    <SwipeItems Mode="Execute">
+                        <SwipeItem Text="Top Menu" BackgroundColor="WhiteSmoke" Invoked="TopSwipeItem_Invoked" />
+                    </SwipeItems>
+                </SwipeView.TopItems>
+                <SwipeView.BottomItems>
+                    <SwipeItems Mode="Execute">                        
+                        <SwipeItem Text="Bottom Menu" BackgroundColor="WhiteSmoke" Invoked="BottomSwipeItem_Invoked" />
+                    </SwipeItems>
+                </SwipeView.BottomItems>
+
+                <SwipeView.Content>
+
+                   <StackLayout VerticalOptions="StartAndExpand">
+                        <controls:TopMenuContentView MenuTitle="BACK"></controls:TopMenuContentView>
+
+                        <CollectionView x:Name="collection" ItemsSource="{Binding Coffees}" VerticalOptions="StartAndExpand" Margin="12, 12, 12, 0">
+                            <d:CollectionView.ItemsSource>
+                                <x:Array Type="{x:Type models:Coffee}">
+                                    <models:Coffee Name="Black" Image="whitecoffeecup600.jpg" Price="2.0"/>
+                                </x:Array>
+                            </d:CollectionView.ItemsSource>
+                
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Vertical" ItemSpacing="12"/>
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>                                    
+                                    <controls:CoffeeContentView
+                                        CoffeeId="{Binding CoffeeId}"
+                                        CoffeeName="{Binding Name}"
+                                        CoffeeImage="{Binding Image}"
+                                        CoffeePrice="{Binding PriceString}"
+                                        IngredientsVisible="True"
+                                        CoffeeSubtitle="Tap to customize">
+                                    </controls:CoffeeContentView>                                                                            
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <StackLayout VerticalOptions="EndAndExpand">
+                            <Image Grid.Column="0" Grid.Row="0" Source="uparrow.png" HeightRequest="20" Style="{StaticResource MenuImageStyle}" />
+                            <Label Grid.Column="0" Grid.Row="1" Text="CHECKOUT" Style="{StaticResource MenuTextStyle}" />                                                            
+                        </StackLayout>                        
+                    </StackLayout>
+
+                </SwipeView.Content>
+        </SwipeView>
+    </ContentPage.Content>
+</ContentPage>

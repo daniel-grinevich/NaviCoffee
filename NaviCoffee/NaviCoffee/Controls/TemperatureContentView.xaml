@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="NaviCoffee.Controls.TemperatureContentView">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Color x:Key="TemperatureTextColor">#d5ae63</Color>
+
+            <Style x:Key="TemperatureButtonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource TemperatureTextColor}" />
+                <Setter Property="WidthRequest" Value="60" />
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="-5, -5, -5, -5" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+      <StackLayout>
+            <Grid VerticalOptions="Center" RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" Text="Warm" Style="{StaticResource TemperatureButtonStyle}"/>
+                <Button Grid.Row="0" Grid.Column="1" Text="Cold" Style="{StaticResource TemperatureButtonStyle}" />
+            </Grid>
+            
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

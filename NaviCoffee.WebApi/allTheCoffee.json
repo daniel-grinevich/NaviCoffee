@@ -1,0 +1,1 @@
+[{"OrderId":1,"Coffees":[{"Id":1,"Name":"Black","Label":"a label","Image":"fake image","Price":5.5,"Ingredients":69,"PriceString":"$5.50"}],"CustomerId":1,"OrderDate":"2020-02-17T13:39:51.2223032-05:00","Status":1}]

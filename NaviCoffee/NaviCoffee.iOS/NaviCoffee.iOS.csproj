@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9388EBDB-0099-482A-87F8-D6C6B1EA86DD}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{89a4fe7c-635d-49c9-8d8c-5cd363c0d68d}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>NaviCoffee.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>NaviCoffee.iOS</AssemblyName>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>Apple Development: James Ridgeway (6A3XRH66Y4)</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Distribution: James Ridgeway (5XFAV623Y6)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>com.navicoffee.NaviCoffee</CodesignProvision>
+    <MtouchLink>None</MtouchLink>
+    <MtouchInterpreter>-all</MtouchInterpreter>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\Fonts\Montserrat-Black.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-BlackItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-Bold.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-BoldItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-ExtraBold.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-ExtraBoldItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-ExtraLight.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-ExtraLightItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-Italic.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-Light.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-LightItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-Medium.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-MediumItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-Regular.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-SemiBold.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-SemiBoldItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-Thin.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-ThinItalic.ttf" />
+    <BundleResource Include="Resources\image.png" />
+    <BundleResource Include="Resources\image%402x.png" />
+    <BundleResource Include="Resources\image%403x.png" />
+    <BundleResource Include="Resources\76Wz.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Enps.gif" />
+    <BundleResource Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <BundleResource Include="Resources\tab_about.png" />
+    <BundleResource Include="Resources\tab_about%402x.png" />
+    <BundleResource Include="Resources\tab_about%403x.png" />
+    <BundleResource Include="Resources\tab_feed.png" />
+    <BundleResource Include="Resources\tab_feed%402x.png" />
+    <BundleResource Include="Resources\tab_feed%403x.png" />
+    <BundleResource Include="Resources\xamarin_logo.png" />
+    <BundleResource Include="Resources\xamarin_logo%402x.png" />
+    <BundleResource Include="Resources\xamarin_logo%403x.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-1242x2688.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-828x1792.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-2688x1242.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-1792x828.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-120-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-40-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-58-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-40-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-80-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-120-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-180-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-1242x2688-1.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-828x1792-1.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-2688x1242-1.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-1792x828-1.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-1125x2436.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-2436x1125.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-1242x2208.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-750x1334.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-2208x1242.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-640x1136.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-640x960.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-768x1024.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-1536x2048.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-1024x768.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-2048x1536.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-320x480.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-640x960-1.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-640x1136-1.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-768x1004.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-1536x2008.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-768x1024-1.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-1536x2048-1.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-1024x748.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-2048x1496.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-1024x768-1.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage-2048x1536-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AppCenter.Analytics">
+      <Version>2.6.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Crashes">
+      <Version>2.6.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Distribute">
+      <Version>2.6.4</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.0" />
+    <PackageReference Include="ZXing.Net.Mobile.Forms">
+      <Version>2.4.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\NaviCoffee\NaviCoffee.csproj">
+      <Project>{6C014A96-9D7E-4867-9752-E9451488EBD7}</Project>
+      <Name>NaviCoffee</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\whitecoffeecup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\blackcoffeecup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\browncofeecup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\blackcoffeecup%40600.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\whitecoffeecup600.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\browncoffeecup600.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\downarrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\uparrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Fonts\OFL.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
+</Project>

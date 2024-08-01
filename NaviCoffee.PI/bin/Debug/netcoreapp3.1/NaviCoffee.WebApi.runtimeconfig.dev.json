@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/Dandelion/.dotnet/store/|arch|/|tfm|",
+      "/Users/Dandelion/.nuget/packages"
+    ]
+  }
+}
